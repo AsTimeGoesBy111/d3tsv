@@ -16,9 +16,9 @@
 
     <script>
 
-    d3.tsv.parse(d3.select("data.tsv").text(), function(d){
-    d3.select("body").append("div")
-        .text(d.petalLength);
+    d3.tsv("data.tsv", function(error, data) {
+    data.forEach(function(d) {
+        d.petalLength = +d.petalLength;
     });
 
 
