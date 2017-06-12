@@ -17,11 +17,13 @@
     <script>
 
     d3.tsv("data.tsv", function(data) {
-      data.forEach(function(d) {
-        d.petalLength = +d.petalLength;
-      });
-      console.log(data[0]);
-     });   
+        for (var i = 0; i < data.length; i++) {
+            console.log(data[i].petalLength);
+            console.log(data[i].species);
+        }
+    });
+
+  
 
 
 
