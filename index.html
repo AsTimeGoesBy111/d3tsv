@@ -13,14 +13,11 @@
 
     </head>
     <body>
-
+    <p id="demo"></p>
     <script>
 
     d3.tsv("data.tsv", function(data) {
-        for (var i = 0; i < data.length; i++) {
-            console.log(data[i].petalLength);
-            console.log(data[i].species);
-        }
+       document.getElementById("demo").innerHTML=data.petalLength;
     });
 
   
